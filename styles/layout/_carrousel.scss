@@ -1,0 +1,26 @@
+.carousel {
+    position: relative;
+    width: 100%; /* adjust the width to your liking */
+    margin: 40px auto;
+    overflow: hidden;
+  }
+  
+  .carousel ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel li {
+    flex: 0 0 100%; /* adjust the width of each item */
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .carousel span {
+    display: block;
+    margin-bottom: 10px;
+  }
