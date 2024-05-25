@@ -1,3 +1,7 @@
+:root{
+    --coul-main:#ecd8be;
+}
+
 button{
     background-color: #E50914;
     border-radius: 5px;
@@ -9,4 +13,8 @@ button{
 .fa-heart {
     font-size: 32px;
     color: red;
+  }
+
+  main{
+    padding-top: 6em;
   }
