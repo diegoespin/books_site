@@ -1,4 +1,4 @@
-const apiKey = 'AIzaSyAU361J0P6HeugVVjSthzlX4_oEw5Dv460';
+// const apiKey = 'AIzaSyAU361J0P6HeugVVjSthzlX4_oEw5Dv460';
 const input = document.querySelector('input');
 const result = document.querySelector('.swiper-wrapper');
 const bouton = document.querySelector('.btn-js');

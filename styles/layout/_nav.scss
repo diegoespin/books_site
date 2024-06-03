@@ -3,12 +3,18 @@ nav {
     flex-direction: row;
     align-items: center; 
     height: 6em; 
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    background-color: var(--coul-main); 
+    padding: 0 3em 0 3em ;
     .navlogo{
         width: 20%;
     }
     .navbar{
-        background-color: brown;
         width: 80%;
         text-align: end;
+        display: flex;
+        justify-content: space-between;
     }
 }
