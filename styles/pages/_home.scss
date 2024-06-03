@@ -24,18 +24,31 @@
 
 
     // --------------- Intro Header ----------------
-
       .intro{
         display: grid;
         grid-template-columns: 40% 60%;
         width: 100%;
-        background-color: lightgray;
-        // grid-gap: 20px;s
+        height: 70vh;
         animation-duration: 2s;
         animation-name: fadeIn;
         position: relative;
-        padding: 3em 0 3em 0;
+        // padding: 4em 0 4em 0;
       }
+
+      .ancre{
+        width: 30px;
+        height: 30px;
+        border-top: 1px solid black;
+        border-right: 1px solid black;
+        rotate: 135deg;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: relative;
+        margin-top: 1.5em;
+        display: block;
+      }
+
 /* fade in */
 @-webkit-keyframes fadeIn {
   from {
