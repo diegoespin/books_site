@@ -10,15 +10,36 @@
 </head>
 <body>
     <nav>
-        <div class="navlogo">
-            <a href="#">LOGO Book</a>
+
+        <a href="#" class="nav-icon" aria-label="homepage" aria-current="page">
+          <!-- <img src="#" alt="Book icon" /> -->
+          <span>LOGO Book</span>
+        </a>
+  
+        <div class="main-navlinks">
+          <button type="button" class="hamburger"  aria-label="Toggle Navigation" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          <div class="navlinks-container">
+            <a href="#" aria-current="page">Accueil</a>
+            <a href="#">À propos</a>
+            <a href="#">Communauté</a>
+            <a href="#">Contact</a>
+          </div>
         </div>
-        <div class="navbar">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Inscription</a>
-            <a href="#">Login</a>
+  
+        <div class="nav-authentication">
+          <a href="#" class="user-toggler" aria-label="Sign in page">
+            <i class="fa-solid fa-user"></i>
+          </a>
+          <div class="sign-btns">
+            <button type="button">S'inscrire</button>
+            <button type="button">Se connecter</button>
+          </div>
         </div>
+        
     </nav>
     <header>
         <div class="wrapper">
@@ -34,8 +55,9 @@
                     <img src="img/pexels-pixabay-159711.jpg" alt="">
                 </div>
             </div>
-            <a href="#ancreok" class="ancre">
-            </a>
+            <div class="ancre-div">
+                <a href="#ancreok" class="arrow"></a>
+            </div>
         </div>
     </header>
 <!-- TEXT DEFILANT  https://codepen.io/Luckywi/pen/wvprMdJ -->
@@ -56,20 +78,27 @@
               </div>
 
               <!-- Slide de Livres -->
+            <div class="book-wrapper">
+                <h2>Les dernières nouveautés</h2>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+
+            <!-- RECHERCHE DE LIVRE -->
 
             <!-- <div class="search-btn">
                 <input type="text" id="search-input">
                 <button class="btn-js">Chercher</button>
             </div> -->
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+            <!-- PRESENTATION -->
 
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
             <div class="presentation">
                 <div class="img-prest">
                     <div class="titre-prest">
@@ -131,6 +160,7 @@
 
     <script src="https://kit.fontawesome.com/3379e155de.js" crossorigin="anonymous"></script>
     <script src="scripts/slide-home.js"></script>
+    <script src="scripts/menu.js"></script>
     <!-- <script src="scripts/carrousel.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>

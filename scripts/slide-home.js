@@ -1,4 +1,4 @@
-// const apiKey = 'AIzaSyAU361J0P6HeugVVjSthzlX4_oEw5Dv460';
+const apiKey = 'AIzaSyAU361J0P6HeugVVjSthzlX4_oEw5Dv460';
 const input = document.querySelector('input');
 const result = document.querySelector('.swiper-wrapper');
 const bouton = document.querySelector('.btn-js');
@@ -24,15 +24,21 @@ function displaybook() {
         const slide = document.createElement('div');
         slide.className = 'swiper-slide';
         slide.dataset.bookid = item.id;
-        const { title, imageLinks } = item.volumeInfo;
+        const { title, imageLinks, authors } = item.volumeInfo;
+        const author = authors? authors.join(', ') : ''; 
+        const cleanTitle = title.replace(/[:\-].*$/, '');
         slide.innerHTML = `
           <a href="singel.html">
-            ${imageLinks ? `<img src="${imageLinks.thumbnail.replace('&edge=curl', '')}&fife=w800" alt="${title}">` : '<img src="img/no_found.jpg" alt="">'}
+            ${imageLinks ? `<img src="${imageLinks.thumbnail.replace('&edge=curl', '')}&fife=w800" alt="${cleanTitle}">` : '<img src="img/no_found.jpg" alt="">'}
           </a>
           <div class="add-like">
-          <button type="button" title="ajouter aux favoris" class="add-to-fav">
-            <i class="fa-solid fa-heart"></i>
-          </button>
+          <div class="titre-lvr"><p> ${cleanTitle}</p></div>
+          <div class="auteur-lvr">
+              <p>${author} </p>
+              <button type="button" title="ajouter aux favoris" class="add-to-fav">
+              <i class="fa-solid fa-heart"></i>
+            </button>
+          </div>
           </div>
         `;
         result.appendChild(slide);
@@ -40,8 +46,7 @@ function displaybook() {
       // Initialize Swiper instance after HTML content is generated
       new Swiper(".mySwiper", {
         slidesPerView: 4,
-        spaceBetween: 10,
-        centeredSlides: true,
+        spaceBetween: 5,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,

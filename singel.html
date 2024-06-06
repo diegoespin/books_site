@@ -1,29 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <title>Exercices n° </title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-YWxsm0/JyUJz3/i2PLO4KA8kX/e9T8cGtC0H/LzE4V6mX5uV5wvEsW6/6ukJhD/rW" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Exercices n° </title>
+    </head>
 <body>
+    <nav>
 
-    <div class="wrapper">
-        <div class="search-btn">
-            <input type="text">
-            <button class="btn-js">Chercher</button>
+        <a href="#" class="nav-icon" aria-label="homepage" aria-current="page">
+          <!-- <img src="#" alt="Book icon" /> -->
+          <span>LOGO Book</span>
+        </a>
+  
+        <div class="main-navlinks">
+          <button type="button" class="hamburger"  aria-label="Toggle Navigation" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          <div class="navlinks-container">
+            <a href="#" aria-current="page">Accueil</a>
+            <a href="#">À propos</a>
+            <a href="#">Communauté</a>
+            <a href="#">Contact</a>
+          </div>
         </div>
-    </div>
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
+  
+        <div class="nav-authentication">
+          <a href="#" class="user-toggler" aria-label="Sign in page">
+            <i class="fa-solid fa-user"></i>
+          </a>
+          <div class="sign-btns">
+            <button type="button">S'inscrire</button>
+            <button type="button">Se connecter</button>
+          </div>
+        </div>
+        
+    </nav>
+
+    <main>
+        <div class="wrapper">
+            <!-- RECHERCHE DE LIVRE -->
+                <div class="search-btn">
+                    <input type="text">
+                    <button class="btn-js">Chercher</button>
+                </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+        
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <!-- PRESENTATION -->
+            <div class="lvr-presentation">
+                <div class="lvr-head">
+                    <div class="lvr-img">
+                        <img src="/img/img-livre.jpg" alt="couverture de livre">
+                    </div>
+                    <div class="lvr-intro">
+                        <h2>Titre de livre</h2>
+                        <p>Auteur du Livre</p>
+                    </div>
+                </div>
+                <div class="lvr-add-like">
+                    <button type="button" title="ajouter aux favoris" class="add-to-fav">
+                        <i class="fa-solid fa-heart"></i>
+                        </button>
+                </div>
+            </div>
+
 
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
-    
-
+    </main>    
+    <script src="https://kit.fontawesome.com/3379e155de.js" crossorigin="anonymous"></script>
+    <script src="scripts/menu.js"></script>
     <script src="scripts/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>

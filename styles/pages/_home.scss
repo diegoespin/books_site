@@ -6,26 +6,57 @@
       }
   
       .swiper-slide {
-        text-align: center;
-        font-size: 6px;
         display: flex;
         justify-content: center;
         align-items: center;
         // width: 800px;
         width: 250px;
-        min-width: 60em;
+        min-width: 315px;
       }
   
       .swiper-slide img {
-        // display: block;
+        display: block;
         width: 300px;
         height: 450px;
         object-fit: cover;
+        border: 1px solid var(--coul-btn);
+        box-shadow: 5px 5px 10px #00000045;
       }
+
+      .swiper-wrapper {
+        transform:inherit;
+      }
+
+    // --------------- SLIDE COEUR -----------------
+    
+    .add-to-fav {
+      background-color: #fff;
+      border: #fff;
+      cursor: pointer;
+    }
+
+    .add-like {
+      display: flex;
+      flex-direction: column;
+
+    .auteur-lvr {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+
+
+    // ---------------- book-wrapper ---------------
+
+    .book-wrapper {
+      width: 70%;
+      margin: 0 auto;
+      margin-bottom: 10em;
+    }
 
 
     // --------------- Intro Header ----------------
-      .intro{
+      .intro {
         display: grid;
         grid-template-columns: 40% 60%;
         width: 100%;
@@ -36,18 +67,26 @@
         // padding: 4em 0 4em 0;
       }
 
-      .ancre{
+      .arrow{
         width: 30px;
         height: 30px;
         border-top: 1px solid black;
         border-right: 1px solid black;
         rotate: 135deg;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        position: relative;
-        margin-top: 1.5em;
         display: block;
+        position: relative;
+      }
+
+      .ancre-div{
+        margin-top: 1.5em;
+        position: relative;
+        top: 5em;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
       }
 
 /* fade in */
@@ -86,18 +125,16 @@
 }
 
       #item-0 {
-        background-color: lightblue;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         padding: 20px;
-        border: solid 1px;
+        border: solid 1px var(--coul-btn);
         margin-right: 20px;
      }
 
      #item-1 {
-      background-color: lightgreen;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -110,7 +147,7 @@
 
 
     // --------------- Media queries ----------------
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .intro {
     grid-template-columns: 1fr;
   }
