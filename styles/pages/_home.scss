@@ -30,9 +30,22 @@
     // --------------- SLIDE COEUR -----------------
     
     .add-to-fav {
-      background-color: #fff;
-      border: #fff;
+      background-color: inherit;
       cursor: pointer;
+      border-radius: 100%;
+      transition: 0.3s all ease-in-out;
+      width: 35px;
+      height: 35px;
+      &:hover{
+        background-color: var(--coul-btn);
+      }
+      i{
+        transition: 0.3s all ease-in-out;
+        font-size: 2ch;
+      }
+      i:hover{
+        color: #fff;
+      }
     }
 
     .add-like {

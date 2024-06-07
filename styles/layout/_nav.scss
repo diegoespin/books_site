@@ -43,8 +43,7 @@ nav {
   
   .sign-btns button {
     min-width: 90px;
-    padding: 10px 5px;
-    margin: 0 5px;
+    padding: 8px;
     cursor: pointer;
     border: none;
     background-color: initial;
@@ -53,6 +52,11 @@ nav {
   
   .sign-btns button:nth-child(2) {
     border: 1px solid var(--coul-btn);
+    transition: 0.3s all ease-in-out;
+    &:hover{
+      background-color: var(--coul-btn);
+      color: #fff;
+    }
   }
   .user-toggler {
     display: none;
@@ -99,6 +103,7 @@ nav {
       position: absolute;
       pointer-events: none;
       transition: opacity 0.3s 0.15s ease-out;
+      left: 0;
     }
     .hamburger span:nth-child(1),
     .hamburger span:nth-child(3) {

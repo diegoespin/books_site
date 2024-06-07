@@ -1,22 +1,108 @@
 .lvr-presentation{
     width: 100%;
     margin: 0 auto;
+    position: relative;
+    top: 100px;
 }
 .lvr-head{
     display: grid;
-    grid-template-columns: 40% 60%;
-    width: 100%;
+    grid-template-columns: 45% 45%;
+    width: 70%;
+    margin: 0 auto;
+    gap: 100px;
     .lvr-img{
         display: flex;
         align-items: center;
         justify-content: center;
         img{
             width: 500px;
+            border: 1px solid var(--coul-btn);
+            box-shadow: 5px 5px 10px rgba(0,0,0,.2705882353);
         }
     }
     .lvr-intro{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        position: relative;
     }
 }
+
+.info-lvr{
+    background-color: var(--coul-main);
+    border: 1px solid var(--coul-main);
+    border-radius: 50px 50px 0 0;
+    padding: 100px 50px;
+    display: flex;
+    column-gap: 100px;
+    .resumer{
+        width: 50%;
+    }
+    .edition{
+        width: 50%;
+    }
+}
+
+
+
+// ------------------ SOOCIAL NETWORK -------------------
+
+.social{
+    display: grid;
+    width: 60%;
+    border: 1px solid var(--coul-btn);
+    border-radius: 2.5px;
+    position: absolute;
+    bottom: 0px;
+    grid-template-columns: 25% 25% 25% 25%;
+    div{
+        width: 100%;
+        text-align: center;
+        padding: 15px 0 15px 0;
+        &:hover{
+            background-color: var(--coul-btn);
+            color:#fff ;
+        }
+        i{
+            transition: 0.3s all ease-in-out;
+            font-size: 2.2ch;
+          }
+          i:hover{
+            color: #fff;
+          }
+    }
+}
+
+
+
+
+
+
+    // --------------- Media queries ----------------
+    @media (max-width: 1000px) {
+        .lvr-head {
+          grid-template-columns: 1fr;
+          width: 100%;
+        }
+        .lvr-presentation {
+            position: inherit;
+            margin: 4em 0;
+        }
+
+        .info-lvr {
+            border-radius: 25px 25px 0 0;
+            display: block;
+            .resumer{
+                width: 100%;
+            }
+            .edition{
+                width: 100%;
+            }
+        }
+
+        .social {
+            position: relative;
+            width: 100%;
+            top: 20px;
+            div{
+                padding: 15px 0 15px 0;
+            }
+        }
+    }
