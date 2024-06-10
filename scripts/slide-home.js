@@ -44,7 +44,7 @@ function displaybook() {
         result.appendChild(slide);
       });
       // Initialize Swiper instance after HTML content is generated
-      new Swiper(".mySwiper", {
+        new Swiper(".mySwiper", {
         slidesPerView: 4,
         spaceBetween: 5,
         pagination: {
@@ -89,6 +89,7 @@ addToFavButtons.forEach(button => {
     })
     .catch(error => console.error(error));
 }
+
 
 // Call displaybook when the page is loaded
 document.addEventListener('DOMContentLoaded', () => {

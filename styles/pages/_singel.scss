@@ -56,6 +56,7 @@
         width: 100%;
         text-align: center;
         padding: 15px 0 15px 0;
+        transition: 0.3s all ease-in-out;
         &:hover{
             background-color: var(--coul-btn);
             color:#fff ;
@@ -63,10 +64,10 @@
         i{
             transition: 0.3s all ease-in-out;
             font-size: 2.2ch;
-          }
-          i:hover{
+        }
+        &:hover i{
             color: #fff;
-          }
+        }
     }
 }
 

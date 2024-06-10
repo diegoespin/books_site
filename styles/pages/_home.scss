@@ -1,16 +1,12 @@
 
     // --------------- Slide ----------------
+
     .swiper {
         width: 100%;
         height: 100%;
       }
   
       .swiper-slide {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        // width: 800px;
-        width: 250px;
         min-width: 315px;
       }
   
@@ -43,7 +39,7 @@
         transition: 0.3s all ease-in-out;
         font-size: 2ch;
       }
-      i:hover{
+      &:hover i{
         color: #fff;
       }
     }
@@ -160,7 +156,7 @@
 
 
     // --------------- Media queries ----------------
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   .intro {
     grid-template-columns: 1fr;
   }
@@ -205,16 +201,18 @@
       color: #fff;
     }
 
-    .contener-prest{
+    .contener-prest {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: inherit;
+      gap: 2em;
       .prest-one, .prest-two, .prest-tree{
+        min-width: 250px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        border: 1px solid;
+        border: 1px solid var(--coul-btn);
         padding: 15px;
-        margin-bottom: 20px;
+        margin: 20px 0;
         img{
           width: 150px;
           height: 150px;
@@ -222,3 +220,10 @@
       }
 
     }
+
+        // --------------- Media queries ----------------
+@media (max-width: 900px) {
+  .contener-prest{
+    flex-wrap: wrap;
+  }
+}
