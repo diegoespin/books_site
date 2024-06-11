@@ -16,6 +16,8 @@ button{
     cursor: pointer;
     padding: 8px;
     border-radius: 2.5px;
+    height: 42px;
+    width: 120px;
 }
 
 .fa-heart {
@@ -30,9 +32,4 @@ button{
   .wrapper {
     width: 90%;
     margin: 0 auto;
-    // padding-top: 3em;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // background-color: antiquewhite;
     }

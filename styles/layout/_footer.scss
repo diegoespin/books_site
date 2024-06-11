@@ -1,19 +1,8 @@
-.contenu {
-    /* grow shrink basis */
-    flex: 1 0 auto;
-  }
-  
-  .contenu p {
-    padding: 5vw 10vw;
-    text-align: justify;
-  }
-  
   footer {
     display: flex;
-    border-top: 1px dashed #000;
+    border-top: 1px solid var(--coul-btn);
     width: 100%;
-    background: #f3c2c2;
-    color: #333;
+    background: var(--coul-main);
   }
   
   .contenu-footer {
@@ -22,15 +11,18 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    font-size: 20px;
     padding: 50px 0 100px;
-    flex-direction: column;
+    flex-direction: row;
   }
   
   .bloc {
-    width: 25%;
+    width: 100%;
     margin: 0 30px;
   }
+
+.copyright{
+  width: 100%;
+}
   
   /* contact */
   .footer-services h3,
@@ -42,23 +34,45 @@
   
   .footer-contact p {
     padding: 5px 0;
+    margin:0;
   }
   
   /* Services */
   
-  .liste-services,
-  .liste-information {
-    list-style-type: none;
+  .bloc{
+    ul {
+      padding:0;
+    } 
+    li{
+      list-style-type: none;
+      padding: 5px 0;
+    }
   }
   
   .liste-services li {
-    padding: 2px 0;
+    padding: 5px 0;
   }
   
-  .liste-services a {
-    text-decoration: none;
-    color: #333;
-  }
   .liste-services a:hover {
-    color: rgb(3, 3, 3);
+    color: var(--coul-btn);
   }
+  .liste-informations a:hover {
+    color: var(--coul-btn);
+  }
+
+
+      // --------------- Media queries ----------------
+@media (max-width: 900px) {
+  .contenu-footer{
+    flex-direction:column;
+    align-items: center;
+  }
+  .bloc{
+    margin: 0 0 0 20px;
+    width: 60%;
+  }
+  .copyright{
+    margin: 40px 0 0 20px;
+    width: 60%;
+  }
+}

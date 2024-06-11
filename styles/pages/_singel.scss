@@ -3,6 +3,8 @@
     margin: 0 auto;
     position: relative;
     top: 100px;
+    top: 75px;
+    z-index: 2;
 }
 .lvr-head{
     display: grid;
@@ -26,10 +28,6 @@
 }
 
 .info-lvr{
-    background-color: var(--coul-main);
-    border: 1px solid var(--coul-main);
-    border-radius: 50px 50px 0 0;
-    padding: 100px 50px;
     display: flex;
     column-gap: 100px;
     .resumer{
@@ -40,6 +38,52 @@
     }
 }
 
+.fond-coul{
+    background-color: var(--coul-main);
+    border: 1px solid var(--coul-main);
+    border-radius: 50px 50px 0 0;
+    padding: 350px 50px 100px;
+    position: relative;
+    z-index: 1;
+    top: -150px;
+}
+
+.leave-comment{
+    width: 100%;
+    display: flex;
+    gap: 100px;
+}
+
+.form-blc-1, .form-blc-2{
+    width: 50%;
+}
+
+.form-blc-2{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.area-comm, .input-name, .input-mail {
+    width:100%;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.input-name, .input-mail{
+    height: 100%;
+}
+
+textarea:focus, input:focus{
+    border: 1px solid var(--coul-btn);
+    outline: none;
+}
+
+
+.btn-poster{
+    margin: 10px 0 0 0;
+}
 
 
 // ------------------ SOOCIAL NETWORK -------------------
@@ -105,5 +149,24 @@
             div{
                 padding: 15px 0 15px 0;
             }
+        }
+        .area-comm, .input-name, .input-mail{
+            width: 100%;
+        }
+        .fond-coul{
+            padding: 50px;
+            position: inherit;
+        }
+        .leave-comment{
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        
+        .form-blc-1, .form-blc-2{
+            width: 100%;
+        }
+        .form-blc-2{
+            gap: 20px;
         }
     }
