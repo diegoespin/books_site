@@ -23,14 +23,17 @@ function displaybook() {
       data.items.forEach(item => {
         const slide = document.createElement('div');
         slide.className = 'swiper-slide';
-        slide.dataset.bookid = item.id;
+        // slide.dataset.bookid = item.id;
+        // console.log(`Book ID: ${item.id}`);
         const { title, imageLinks, authors } = item.volumeInfo;
         const author = authors? authors.join(', ') : ''; 
         const cleanTitle = title.replace(/[:\-].*$/, '');
         slide.innerHTML = `
-          <a href="singel.html">
+          <a href="singel.html"></a>
+          <div class="img-book">
             ${imageLinks ? `<img src="${imageLinks.thumbnail.replace('&edge=curl', '')}&fife=w800" alt="${cleanTitle}">` : '<img src="img/no_found.jpg" alt="">'}
-          </a>
+          </div>
+
           <div class="add-like">
           <div class="titre-lvr"><p> ${cleanTitle}</p></div>
           <div class="auteur-lvr">
@@ -42,6 +45,16 @@ function displaybook() {
           </div>
         `;
         result.appendChild(slide);
+
+
+        // Ajout d'un événement click sur les éléments a
+
+        slide.querySelector('.img-book').addEventListener('click', (e) => {
+          sessionStorage.setItem('bookId', item.id);
+          console.log(`Book ID: ${item.id}`);
+          window.location.href = 'singel.html';
+        });
+
       });
       // Initialize Swiper instance after HTML content is generated
         new Swiper(".mySwiper", {
@@ -57,34 +70,6 @@ function displaybook() {
         },
       });
       page++; // increment the page variable
-
-      // Sélectionnez tous les boutons "ajouter aux favoris"
-const addToFavButtons = document.querySelectorAll('.add-to-fav');
-
-// Ajoutez un événement d'écouteur de clic à chaque bouton
-addToFavButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    // Récupérez les données de l'élément sélectionné
-    const slide = button.closest('.swiper-slide');
-    const bookId = slide.dataset.bookid;
-    const title = slide.querySelector('a img').alt;
-    const image = slide.querySelector('a img').src;
-
-    // Créez un objet avec les données de l'élément
-    const book = {
-      id: bookId,
-      title: title,
-      image: image
-    };
-
-    // Enregistrez l'élément dans le stockage local
-    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    favorites.push(book);
-    localStorage.setItem('favorites', JSON.stringify(favorites));
-    console.log(favorites);
-  });
-});
-
 
     })
     .catch(error => console.error(error));

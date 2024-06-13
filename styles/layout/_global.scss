@@ -1,7 +1,11 @@
 :root{
     --coul-main:#f6f6ee;
-    --coul-typo: #000;
+    --coul-typo:  #566573 ;
     --coul-btn: #9c7b2c;
+}
+
+body {
+  color: var(--coul-typo);
 }
 
 a{
@@ -30,6 +34,23 @@ button{
   }
 
   .wrapper {
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
+    padding: 0 20px;
+    h2{
+      text-align: center;
+      font-size: 3em;
+      color: var(--coul-typo);
     }
+  }
+
+
+            // --------------- Media queries ----------------
+@media (max-width: 900px) {
+  .wrapper{
+    width: 90%;
+    h2{
+      font-size: 1.5em;
+    }
+  }
+}

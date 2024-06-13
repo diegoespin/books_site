@@ -1,0 +1,5 @@
+Fonts used in this design:
+
+Font: Roboto Serif
+Author: Commercial Type,Greg Gazdowicz
+Url: https://fonts.google.com/specimen/Roboto+Serif

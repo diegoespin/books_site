@@ -73,7 +73,6 @@
         animation-duration: 2s;
         animation-name: fadeIn;
         position: relative;
-        // padding: 4em 0 4em 0;
       }
 
       .arrow{
@@ -89,7 +88,7 @@
       .ancre-div{
         margin-top: 1.5em;
         position: relative;
-        top: 5em;
+        top: 2em;
         height: 100%;
         width: 100%;
         display: flex;
@@ -174,31 +173,8 @@
       width: 100%;
     }
 
-    .img-prest{
-      background: url("../img/pexels-pixabay-159711.jpg") center/cover;
-      position: relative;
-      &::after {
-          content:"";
-          position: absolute;
-          z-index: 1;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgb(0,0,0);
-          background: linear-gradient(59deg, rgba(0,0,0,0.8231441048034934) 0%, rgba(0,0,0,0.5152838427947598) 100%); 
-      }
-    }
-
     .titre-prest{
-      position: relative;
-      z-index: 3;
-      padding: 100px 0 140px;
-      top: 0;
-      left: 0;
       width: 100%;
-      height: 100%;
-      color: #fff;
     }
 
     .contener-prest {
@@ -211,7 +187,7 @@
         flex-direction: column;
         align-items: center;
         border: 1px solid var(--coul-btn);
-        padding: 15px;
+        padding:50px;
         margin: 20px 0;
         img{
           width: 150px;
@@ -223,13 +199,19 @@
 
     .communaute{
       position: relative;
-      margin: 50px 0 100px;
-    }
-    .news-coul{
+      margin: 100px 0 100px;
       background-color: var(--coul-main);
       border-radius: 20px;
-      padding: 30px;
-      width: 100%;
+      padding: 50px 100px 100px;
+      display: flex;
+      flex-direction: row;
+      width: 70%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%);
+    }
+    .news-coul{
+      width: 50%;
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
@@ -243,41 +225,43 @@
           margin: 0 20px;
         }
       }
+      h2{
+        padding: 0 0 100px;
+      }
     }
 
     .news-img{
       position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 600px;
+      bottom: 50px;
+      right: 20px;
+      width: 50%;
+      text-align: center;
       img{
-        width: 100%;
+        width: 500px;
       }
     }
 
 
 
         // --------------- Media queries ----------------
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .contener-prest{
     flex-wrap: wrap;
   }
   .communaute{
-    position: inherit;
-    margin: 0;
-    background-color: var(--coul-main);
-    border-radius: 20px;
-    padding: 20px;
+    padding: 50px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     .news-coul{
       padding: 0;
+      margin-bottom: 50px;
+      width: 100%;
     }
   }
   .news-img{
     position: inherit;
-    width: 300px;
+    width: 100%;
   }
 }
