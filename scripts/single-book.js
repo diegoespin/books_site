@@ -23,22 +23,19 @@ if (!bookId) {
             return;
           }
       
-          const { title, imageLinks, authors, description, language, publisher } = data.volumeInfo;
+          const { title, imageLinks, authors, description, publisher, industryIdentifiers} = data.volumeInfo;
           const cleanTitle = title.replace(/[:\-].*$/, '');
           const author = authors ? authors.join(', ') : '';
+          const isbn = industryIdentifiers.find(identifier => identifier.type === 'ISBN_10' || identifier.identifier.type === 'ISBN_13').identifier;
+          const cleanResum = description.replace(/<[^>]+>/g, '');
       
           // Afficher les informations du livre dans la page single.html
           document.querySelector('.lvr-intro h2').textContent = cleanTitle;
-          document.querySelector('.edition .lang').textContent = language;
           document.querySelector('.edition .edit').textContent = publisher;
           document.querySelector('.lvr-img img').src = `${imageLinks.thumbnail.replace('&edge=curl', '')}&fife=w800`;
           document.querySelector('.lvr-intro .auteur').textContent = author;
-        //   document.querySelector('.book-details').innerHTML = `
-        //     <img src="${imageLinks.thumbnail.replace('&edge=curl', '')}&fife=w800" alt="${cleanTitle}">
-        //     <h2>${cleanTitle}</h2>
-        //     <p>Auteur : ${author}</p>
-        //     <p>Description : ${description}</p>
-        //   `;
+          document.querySelector('.edition .isbn').textContent = isbn;
+          document.querySelector('.resumer .resum').textContent = cleanResum;
         })
         .catch(error => console.error(error));
   }
